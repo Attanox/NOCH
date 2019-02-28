@@ -25,6 +25,36 @@ addEventListenerList(arr, 'click');
 addEventListenerList(arr, 'mouseover');
 
 
+let checkb = document.querySelector('.header__nav__container__navi--button');
+
+checkb.addEventListener('click', function(){
+    let mlist = document.querySelector('.header__nav__container__navi > ul');
+    //setTimeout(function(){
+        // document.querySelector('.header > h1').classList.toggle('hide_n_show');
+    //}, 500);
+    if(mlist.className === 'roll_down'){
+        setTimeout(function(){
+            document.querySelector('.header > h1').classList.toggle('hide_n_show');
+        }, 700);
+        //document.querySelector('.header > h1').classList.toggle('slow');
+        mlist.classList.toggle('roll_down');
+    } else {
+        setTimeout(function(){
+            mlist.classList.toggle('roll_down');
+        }, 700);
+        //document.querySelector('.header > h1').classList.toggle('slow');
+        document.querySelector('.header > h1').classList.toggle('hide_n_show');
+    }
+});
+
+function coffe_mug() {
+    drop.style.marginTop = -drop.clientHeight/2 + 5 + "px";
+};
+
+
+const drop = document.querySelector('.about > .about__drop');
+coffe_mug();
+window.onresize = coffe_mug();
 
     
 
