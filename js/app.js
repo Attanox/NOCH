@@ -51,6 +51,7 @@ checkb.addEventListener('click', function(){
 const drop = document.querySelector('.about > .about__drop');
 function coffe_mug() {
     drop.style.marginTop = -drop.clientHeight/2 + 5 + "px";
+    console.log(drop.clientHeight);
 };
 
 coffe_mug();
