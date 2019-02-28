@@ -68,7 +68,7 @@ function fix()
 
 if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
     let hh = document.querySelector('.header').offsetHeight;
-    document.querySelector('.header').style.height = '95v';;
+    document.querySelector('.header').style.height = hh;
 }
 
 
