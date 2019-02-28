@@ -47,12 +47,12 @@ checkb.addEventListener('click', function(){
     }
 });
 
+
+const drop = document.querySelector('.about > .about__drop');
 function coffe_mug() {
     drop.style.marginTop = -drop.clientHeight/2 + 5 + "px";
 };
 
-
-const drop = document.querySelector('.about > .about__drop');
 coffe_mug();
 window.onresize = coffe_mug();
 
