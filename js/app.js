@@ -47,15 +47,31 @@ checkb.addEventListener('click', function(){
     }
 });
 
-
-const drop = document.querySelector('.about > .about__drop');
 function coffe_mug() {
     drop.style.marginTop = -drop.clientHeight/2 + 5 + "px";
     //console.log(drop.clientHeight);
 };
 
+
+const drop = document.querySelector('.about > .about__drop');
 coffe_mug();
 window.onresize = coffe_mug();
+
+function fix()
+{
+    var el = this;
+    var par = el.parentNode;
+    var next = el.nextSibling;
+    par.removeChild(el);
+    setTimeout(function() {par.insertBefore(el, next);}, 0)
+}
+
+if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+    let hh = document.querySelector('.header').offsetHeight;
+    document.querySelector('.header').style.height = hh;
+}
+
+
 
     
 

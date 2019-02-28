@@ -20,6 +20,9 @@ a:visited, a:link {
   color: #fff;
   cursor: pointer; }
 
+a:focus {
+  outline: none !important; }
+
 ::selection {
   background-color: #836950;
   color: #fff; }
