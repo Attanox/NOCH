@@ -18,25 +18,37 @@
     <!-- this is.. excuse me.. a DAMN fine cup of coffee -->
 </head>
 <body>
-    <header class="header">
+    <header class="header" id="home">
         <nav class="header__nav">
+            <div class="header__nav__container">
+                <img class="logo" src="img/loogo.svg">
+                <div class="header__nav__container__navi">
+                    <label for="navi-toggle" class="header__nav__container__navi--button">
+                        <span class="header__nav__container__navi--icon">&nbsp;</span>
+                    </label>
+                    <input type="checkbox" class="header__nav__container__navi--checkbox" id="navi-toggle">
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#menu">Menu</a></li>
+                        <li><a href="#location">Location</a></li>
+                    </ul>
+                </div>
+            </div>
             <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
                 <li>
                     <img class="logo" src="img/loogo.svg">
                 </li>
-                <li><a href="#">Menu</a></li>
-                <li><a href="#">Location</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#location">Location</a></li>
             </ul>
         </nav>
         <h1>Welcome.</h1>
-        <!-- <div class="downward"><svg><use xlink:href="img/sprite.svg#icon-chevron-down"></use></svg></div> -->
-        <!-- <img src="img/background.svg" alt="part of background"> -->
-        <div id="drop"></div>
     </header>
-    <section class="about">
-        <img src="img/coffee_mug.svg" alt="coffee mug" class="about__mug">
+    <section class="about" id="about">
+        <div class="about__drop"></div>
         <h1 class="about__heading">What makes us special?</h1>
         <div class="about__cards">
             <div class="about__cards--card1">
@@ -68,7 +80,7 @@
     <section class="quote">
         <h1>"This is.. excuse me.. a DAMN fine cup of coffee."</h1>
     </section>
-    <section class="menu">
+    <section class="menu" id="menu">
         <h2 class="menu__heading">Menu</h2>
         <div class="menu__container1">
             <div class="menu__container1--item">
@@ -156,7 +168,7 @@
             <span class="desserts">Desserts</span>
         </div>
     </section>
-    <section class="box">
+    <section class="box" id="location">
         <div class="box__container">
             <h2>New Orleans<br>Coffee House</h2>
             <h4>44 Park Street</h4>
@@ -167,13 +179,13 @@
     <footer class="footer">
         <nav class="footer__nav">
             <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
                 <li>
                     <a href="#" class="up-sign"><img src="img/up-sign.svg"></a>
                 </li>
-                <li><a href="#">Menu</a></li>
-                <li><a href="#">Location</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#location">Location</a></li>
             </ul>
         </nav>
         <p>New Orleans Coffee House 2019, All rights reserved</p>
