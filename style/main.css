@@ -38,18 +38,18 @@ a:focus {
   align-items: center;
   transition: opacity 0.4s ease; }
   .preload .preloader {
-    width: 150px;
-    height: 225px;
-    background: url("../img/coffee-sprite.png") left center;
-    animation: play 0.8s steps(5) infinite alternate; }
+    width: 5rem;
+    animation: play 0.8s infinite alternate; }
 
 .preload-finish {
   opacity: 0;
   pointer-events: none; }
 
 @keyframes play {
-  100% {
-    background-position: -750px; } }
+  from {
+    transform: translateY(0); }
+  to {
+    transform: translateY(-50%); } }
 
 .header {
   color: #fff;
