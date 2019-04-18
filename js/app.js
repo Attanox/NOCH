@@ -68,9 +68,9 @@ window.addEventListener('load', function(){
         setTimeout(function() {par.insertBefore(el, next);}, 0)
     }
 
-    if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
-        let hh = document.querySelector('.header').offsetHeight;
-        document.querySelector('.header').style.height = '95vh';
-    }
+    // if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+    //     let hh = document.querySelector('.header').offsetHeight;
+    //     document.querySelector('.header').style.height = '95vh';
+    // }
 
 });
