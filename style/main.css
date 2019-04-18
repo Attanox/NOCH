@@ -297,6 +297,8 @@ a:focus {
     margin: auto;
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
     text-align: center;
     margin-bottom: 2rem;
     overflow: hidden; }
