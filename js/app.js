@@ -1,5 +1,7 @@
 window.addEventListener('load', function(){
-    document.querySelector('.preload').classList.add('preload-finish');
+    setTimeout(function(){
+        document.querySelector('.preload').classList.add('preload-finish');
+    },2500);
     let arr = document.querySelectorAll('.options__container > *');
     let containers = document.querySelectorAll('.menu__container1, .menu__container2, .menu__container3');
     //console.log(containers);
