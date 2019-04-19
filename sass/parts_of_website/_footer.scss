@@ -1,0 +1,67 @@
+.footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: $color-black;
+    color: $color-white;
+    padding: 1rem 0;
+    &__nav{
+        ul{
+            list-style: none;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.7rem;
+            letter-spacing: 1px;
+            @media screen and (max-width: $break-medium-large){
+                font-size: 0.5rem;
+                width: 100%;
+            }
+            & li{
+                margin: 0 0.5rem;
+                padding: 0.5rem;
+                @media screen and (max-width: $break-medium-large){
+                    margin: 0 0.2rem;
+                    padding: 0.2rem;
+                }
+                @media screen and (max-width: $break-tiny){
+                    margin: 0 ;
+                    padding: 0.2rem;
+                }
+                & img{
+                    width: 1.5rem;
+                    @media screen and (max-width: $break-medium-large){
+                        width: 1rem;
+                    }
+                }
+                & a:not(.up-sign){
+                    padding: 1rem;
+                    @media screen and (max-width: $break-tiny){
+                        padding: 0.4rem;
+                    }
+                    transition: all 0.4s;
+                    border-radius: 50%;
+                    &:hover, &:active{
+                        background-color: $color-white;
+                        color: $color-black;
+                    }
+                }
+                & a:focus{
+                    background-color: $color-black;
+                    color: $color-white;
+                }
+            }
+        }
+    }
+    & p{
+        font-size:0.5rem;
+        letter-spacing: 1px;
+        font-weight: 300;
+        margin-top: 1.5rem;
+        opacity: 0.6;
+        @media screen and (max-width: $break-tiny){
+            font-size:0.25rem;
+        }
+    }
+}

@@ -1,0 +1,14 @@
+{
+  "name": "xb",
+  "version": "1.0.0",
+  "description": "website for coffee house",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "node-sass sass/_main.scss style/main.css"
+  },
+  "author": "Andy",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^4.11.0"
+  }
+}

@@ -1,0 +1,40 @@
+.quote{
+    position: relative;
+    overflow: hidden;
+    &::before{
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background-image: url("../img/top.png");
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        filter: blur(2px) brightness(50%);
+        -webkit-filter: blur(2px) brightness(50%);
+        transform: scale(1.2);
+        z-index: -5;
+    }
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    & h1{
+        font-family: 'Playfair Display', serif;
+        font-size: 2.5rem;
+        font-weight: 200;
+        letter-spacing: 1px;
+        color: $color-white;
+        text-align: center;
+        @media screen and (max-width: $break-medium-large){
+            font-size: 1.7rem;
+        }
+        @media screen and (max-width: $break-small){
+            font-size: 1.2rem;
+        }
+    }
+}

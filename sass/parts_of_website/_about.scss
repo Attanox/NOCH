@@ -1,0 +1,134 @@
+.about{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__drop{
+        background-image: url("../img/background_l.svg");
+        width: 100vw;
+        height: 50vh;
+        margin-top: -10rem;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        @media screen and (max-width: $break-medium-small){
+            height: 45vh;
+        }
+        @media screen and (max-width: $break-small){
+            height: 40vh;
+        }
+        @media screen and (max-width: $break-tiny){
+            height: 35vh;
+        }
+    }
+
+    &__heading{
+        letter-spacing: 2px;
+        margin-bottom:2rem;
+        font-family: 'Playfair Display', serif;
+        font-size: 3rem;
+        color: $color-black;
+        font-weight: 300;
+        margin-top: 2rem;
+        @media screen and (max-width: $break-medium-large){
+            font-size: 2.2rem;
+        }
+        @media screen and (max-width: $break-small){
+            font-size: 1.2rem;
+        }
+    }
+    &__cards{
+        width: 80%;
+        margin: auto;
+        display: flex;
+        flex-wrap: wrap;
+        @media screen and (max-width: $break-medium-small){
+            flex-direction: column;
+        }
+        @media screen and (max-width: $break-large){
+            justify-content: center;
+            align-items: center;
+            // flex-direction: column;
+        }
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin-bottom: 2rem;
+        overflow: hidden;
+        & > *{
+            //max-height: 100%;
+            margin: 0.5rem 1rem;
+            padding: 1.5rem;
+            padding-top: 4rem;
+            background-color: $color-primary;
+            border: 1px solid $color-primary;
+            border-radius: 0.5rem;
+            color: $color-white;
+            transition: all 0.4s;
+            @media screen and (min-width: $break-large){
+                flex-basis: 20%;
+            }
+            @media screen and (max-width: $break-large){
+                flex-basis: 40%;
+                // max-width: 100%;  
+            }
+            overflow: hidden;
+            & span{
+                display:block;
+                width: 100%;
+                height: 4rem;
+                background-image: url("../img/coffee_bean_white.svg");
+                background-position: center;
+                background-repeat: no-repeat;
+                margin: auto;
+                transition: all 0.4s;
+                transform: translateY(85%);
+                @media screen and (max-width: $break-tiny){
+                    transform: translateY(50%);
+                }
+            }
+            & h2{
+                font-size: 1.7rem;
+                letter-spacing: 1px;
+                margin-top: 1.5rem;
+                margin-bottom: 1rem;
+                transition: all 0.4s;
+                transform: translateY(90%);
+                @media screen and (max-width: $break-medium-large){
+                    font-size: 1.4rem;
+                    margin-top: 1.8rem;
+                }
+                @media screen and (max-width: $break-tiny){
+                    font-size: 1.1rem;
+                }
+            }
+            & p{
+                letter-spacing: 1px;
+                line-height: 1.7rem;
+                transition: all 0.4s;
+                transform: translateY(200%);
+                @media screen and (max-width: $break-medium-large){
+                    line-height: 1.3rem;
+                }
+                @media screen and (max-width: $break-tiny){
+                    line-height: 1.3rem;
+                }
+            }
+        }
+        & > *:hover{
+            background-color: $color-white;
+            & span{
+                background-image: url("../img/coffee_bean_brown.svg");
+                transform: translateY(0);
+            }
+            & h2{
+                transform: translateY(0);
+                color: $color-black;
+            }
+            & p{
+                transform: translateY(0);
+                color: $color-black;
+            }
+        }
+    }
+}

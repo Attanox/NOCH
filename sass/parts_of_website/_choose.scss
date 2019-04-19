@@ -1,0 +1,88 @@
+.options{
+    position: relative;
+    padding: 2rem;
+    overflow: hidden;
+    color: $color-white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @media screen and (max-width: $break-medium-small){
+        padding: 1.3rem 0.75rem;
+    }
+    &::before{
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background-image: url("../img/middle.png");
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        filter: blur(2px) brightness(50%);
+        -webkit-filter: blur(2px) brightness(50%);
+        transform: scale(1.2);
+        z-index: -5;
+    }
+    &__container{
+        width: 50%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        @media screen and (max-width: $break-medium-small){
+            width: 100%;
+        }
+        & > *{
+            position: relative;
+            font-size: 1.2rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            cursor: pointer;
+            @media screen and (max-width: $break-small){
+                font-size: 0.8rem;
+                letter-spacing: 1px;
+            }
+            &::before{
+                content:"\A";
+                border-style: solid;
+                border-width: 15px 10px 0 10px;
+                border-color: $color-white transparent transparent transparent;
+                position: absolute;
+                top: -2.1rem;
+                @media screen and (max-width: $break-medium-small){
+                    top: -1.4rem;
+                }
+            }
+        }
+        & .coffees::before{
+            display: none;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        & .drinks::before{
+            display: none;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        & .desserts::before{
+            display: none;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        & .coffees:hover::before, & .drinks:hover::before, & .desserts:hover::before,
+        & .coffees:active::before, & .drinks:active::before, & .desserts:active::before{
+            display: block;   
+        }
+
+        & .active::before{
+            display: block;
+        }
+
+        & .off_left::before{
+            left:0;
+        }
+    }
+}
