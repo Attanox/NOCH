@@ -1,7 +1,7 @@
 window.addEventListener('load', function(){
     setTimeout(function(){
         document.querySelector('.preload').classList.add('preload-finish');
-    },2500);
+    },2000);
     let arr = document.querySelectorAll('.options__container > *');
     let containers = document.querySelectorAll('.menu__container1, .menu__container2, .menu__container3');
     //console.log(containers);
@@ -31,7 +31,9 @@ window.addEventListener('load', function(){
 
     let checkb = document.querySelector('.header__nav__container__navi--button');
 
-    checkb.addEventListener('click', function(){
+    checkb.addEventListener('click', roll_down_up);
+
+    function roll_down_up(){
         let mlist = document.querySelector('.header__nav__container__navi > ul');
         //setTimeout(function(){
             // document.querySelector('.header > h1').classList.toggle('hide_n_show');
@@ -48,6 +50,13 @@ window.addEventListener('load', function(){
             }, 700);
             //document.querySelector('.header > h1').classList.toggle('slow');
             document.querySelector('.header > h1').classList.toggle('hide_n_show');
+        }
+    }
+
+    this.window.addEventListener('click', function(){
+        let mlist = document.querySelector('.header__nav__container__navi > ul');
+        if (mlist.className === 'roll_down') {
+            roll_down_up();
         }
     });
 
